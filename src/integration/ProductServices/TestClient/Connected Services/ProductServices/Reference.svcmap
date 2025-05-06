@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d9086c6e-a7c6-49c0-b857-8f91c3b2f848" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vm48bb01/ProductServices/ProcessInventoryUpdate.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProcessInventoryUpdate.disco" MetadataType="Disco" ID="26e1f095-c81a-41eb-b0f9-81dcff545d3e" SourceId="1" SourceUrl="http://vm48bb01.org48aa.loc/ProductServices/ProcessInventoryUpdate.svc?disco" />
+    <MetadataFile FileName="BizTalkServiceInstance.wsdl" MetadataType="Wsdl" ID="e777840a-d52c-4d77-b812-c492ce78dd33" SourceId="1" SourceUrl="http://vm48bb01.org48aa.loc/ProductServices/ProcessInventoryUpdate.svc?wsdl" />
+    <MetadataFile FileName="ProcessInventoryUpdate.xsd" MetadataType="Schema" ID="9d7ff961-6c96-4cbb-b7ee-da73ca9add2e" SourceId="1" SourceUrl="http://vm48bb01.org48aa.loc/ProductServices/ProcessInventoryUpdate.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

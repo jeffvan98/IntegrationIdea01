@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://Schemas.InventoryUpdate" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" targetNamespace="http://Schemas.InventoryUpdate" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="InventoryUpdate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="ProductName" type="xs:string" />
+        <xs:element minOccurs="0" maxOccurs="1" name="SerialNumber" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="QuantityChange" type="xs:integer" />
+        <xs:element minOccurs="1" maxOccurs="1" name="Location" type="xs:string" />
+        <xs:element minOccurs="1" maxOccurs="1" name="UpdateDate" type="xs:date" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,221 @@
+﻿#if __DESIGNER_DATA
+#error Do not define __DESIGNER_DATA.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<om:MetaModel MajorVersion="1" MinorVersion="3" Core="2b131234-7959-458d-834f-2dc0769ce683" ScheduleModel="66366196-361d-448d-976f-cab5e87496d2" xmlns:om="http://schemas.microsoft.com/BizTalk/2003/DesignerData">
+    <om:Element Type="Module" OID="744b56e2-5d3c-4dca-ae57-65fc9b0d28b7" LowerBound="1.1" HigherBound="45.1">
+        <om:Property Name="ReportToAnalyst" Value="True" />
+        <om:Property Name="Name" Value="Orchestrations" />
+        <om:Property Name="Signal" Value="False" />
+        <om:Element Type="ServiceDeclaration" OID="5a37d2f7-1338-4c20-9a94-52671b72f3bb" ParentLink="Module_ServiceDeclaration" LowerBound="18.1" HigherBound="44.1">
+            <om:Property Name="InitializedTransactionType" Value="False" />
+            <om:Property Name="IsInvokable" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ProcessInventoryUpdate" />
+            <om:Property Name="Signal" Value="True" />
+            <om:Element Type="MessageDeclaration" OID="3a47ca74-c69e-4362-8238-412527f30284" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="25.1" HigherBound="26.1">
+                <om:Property Name="Type" Value="Schemas.InventoryUpdate" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InventoryUpdateInput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="72cc5fa4-5f08-4008-92dc-71b365f44e41" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="26.1" HigherBound="27.1">
+                <om:Property Name="Type" Value="ProductServices.Schemas.Procedure_dbo.UpdateInventory" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InventoryUpdateOutput" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="MessageDeclaration" OID="e7c0fc71-6673-4a0b-8307-c6836901ae1e" ParentLink="ServiceDeclaration_MessageDeclaration" LowerBound="27.1" HigherBound="28.1">
+                <om:Property Name="Type" Value="ProductServices.Schemas.Procedure_dbo.UpdateInventoryResponse" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="InventoryUpdateOutputResponse" />
+                <om:Property Name="Signal" Value="True" />
+            </om:Element>
+            <om:Element Type="ServiceBody" OID="1e2e3043-c042-4536-8ed8-bfa9f69f7e2f" ParentLink="ServiceDeclaration_ServiceBody">
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="Receive" OID="db78a648-c8d0-4270-9a19-3869f11a8182" ParentLink="ServiceBody_Statement" LowerBound="30.1" HigherBound="32.1">
+                    <om:Property Name="Activate" Value="True" />
+                    <om:Property Name="PortName" Value="ReceiveInventoryUpdatePort" />
+                    <om:Property Name="MessageName" Value="InventoryUpdateInput" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveInventoryUpdate" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Construct" OID="516b0547-a3ea-4516-b109-b46a25ec5afa" ParentLink="ServiceBody_Statement" LowerBound="32.1" HigherBound="38.1">
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ConstructInventoryUpdateOutput" />
+                    <om:Property Name="Signal" Value="True" />
+                    <om:Element Type="MessageRef" OID="2e20b9cf-1049-48f6-ad54-4e7d054b0717" ParentLink="Construct_MessageRef" LowerBound="33.23" HigherBound="33.44">
+                        <om:Property Name="Ref" Value="InventoryUpdateOutput" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Signal" Value="False" />
+                    </om:Element>
+                    <om:Element Type="Transform" OID="a9f56550-fd68-41c2-94bb-28538135b6d8" ParentLink="ComplexStatement_Statement" LowerBound="35.1" HigherBound="37.1">
+                        <om:Property Name="ClassName" Value="Maps.InventoryUpdateToOutput" />
+                        <om:Property Name="ReportToAnalyst" Value="True" />
+                        <om:Property Name="Name" Value="InventoryUpdateToOutput" />
+                        <om:Property Name="Signal" Value="True" />
+                        <om:Element Type="MessagePartRef" OID="9c6306db-df7c-402c-b53c-4577a1141485" ParentLink="Transform_InputMessagePartRef" LowerBound="36.83" HigherBound="36.103">
+                            <om:Property Name="MessageRef" Value="InventoryUpdateInput" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_1" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                        <om:Element Type="MessagePartRef" OID="d06545b2-4597-401b-a4d8-6732d79edd9e" ParentLink="Transform_OutputMessagePartRef" LowerBound="36.28" HigherBound="36.49">
+                            <om:Property Name="MessageRef" Value="InventoryUpdateOutput" />
+                            <om:Property Name="ReportToAnalyst" Value="True" />
+                            <om:Property Name="Name" Value="MessagePartReference_2" />
+                            <om:Property Name="Signal" Value="False" />
+                        </om:Element>
+                    </om:Element>
+                </om:Element>
+                <om:Element Type="Send" OID="4627650b-c4df-40ed-ac98-3b9538c819d1" ParentLink="ServiceBody_Statement" LowerBound="38.1" HigherBound="40.1">
+                    <om:Property Name="PortName" Value="SendInventoryUpdatePort" />
+                    <om:Property Name="MessageName" Value="InventoryUpdateOutput" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Request" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="SendInventoryUpdate" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="Receive" OID="9f05de80-f4bc-4978-8bc5-8d8b710a22c8" ParentLink="ServiceBody_Statement" LowerBound="40.1" HigherBound="42.1">
+                    <om:Property Name="Activate" Value="False" />
+                    <om:Property Name="PortName" Value="SendInventoryUpdatePort" />
+                    <om:Property Name="MessageName" Value="InventoryUpdateOutputResponse" />
+                    <om:Property Name="OperationName" Value="Operation_1" />
+                    <om:Property Name="OperationMessageName" Value="Response" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="ReceiveInventoryUpdateResponse" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="e8ce7bdb-b4a1-4cec-9a0c-f78161668a2a" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="21.1" HigherBound="23.1">
+                <om:Property Name="PortModifier" Value="Implements" />
+                <om:Property Name="Orientation" Value="Left" />
+                <om:Property Name="PortIndex" Value="-1" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Orchestrations.ReceiveInventoryUpdatePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="ReceiveInventoryUpdatePort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="b106bf95-ef29-49e1-afb9-5190bbb2cace" ParentLink="PortDeclaration_CLRAttribute" LowerBound="21.1" HigherBound="22.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+            <om:Element Type="PortDeclaration" OID="6aa0cbd7-0884-405e-95d9-e98af5df7274" ParentLink="ServiceDeclaration_PortDeclaration" LowerBound="23.1" HigherBound="25.1">
+                <om:Property Name="PortModifier" Value="Uses" />
+                <om:Property Name="Orientation" Value="Right" />
+                <om:Property Name="PortIndex" Value="0" />
+                <om:Property Name="IsWebPort" Value="False" />
+                <om:Property Name="OrderedDelivery" Value="False" />
+                <om:Property Name="DeliveryNotification" Value="None" />
+                <om:Property Name="Type" Value="Orchestrations.SendInventoryUpdatePortType" />
+                <om:Property Name="ParamDirection" Value="In" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="SendInventoryUpdatePort" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="LogicalBindingAttribute" OID="91948b07-3341-4149-8769-12e1b5a6d79c" ParentLink="PortDeclaration_CLRAttribute" LowerBound="23.1" HigherBound="24.1">
+                    <om:Property Name="Signal" Value="False" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="0a9b6a06-5871-4d05-9fba-532322d3805b" ParentLink="Module_PortType" LowerBound="4.1" HigherBound="11.1">
+            <om:Property Name="Synchronous" Value="False" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="ReceiveInventoryUpdatePortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="dd8aaa52-eb53-49b9-9fc3-ab3848b167d1" ParentLink="PortType_OperationDeclaration" LowerBound="6.1" HigherBound="10.1">
+                <om:Property Name="OperationType" Value="OneWay" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="992280cb-44db-4f49-bc7d-8df663e4e135" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="8.13" HigherBound="8.36">
+                    <om:Property Name="Ref" Value="Schemas.InventoryUpdate" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+        <om:Element Type="PortType" OID="16818eca-0a44-4e4f-8152-f4bc01775c95" ParentLink="Module_PortType" LowerBound="11.1" HigherBound="18.1">
+            <om:Property Name="Synchronous" Value="True" />
+            <om:Property Name="TypeModifier" Value="Internal" />
+            <om:Property Name="ReportToAnalyst" Value="True" />
+            <om:Property Name="Name" Value="SendInventoryUpdatePortType" />
+            <om:Property Name="Signal" Value="False" />
+            <om:Element Type="OperationDeclaration" OID="c6cec460-9223-4667-9720-26067777c0c8" ParentLink="PortType_OperationDeclaration" LowerBound="13.1" HigherBound="17.1">
+                <om:Property Name="OperationType" Value="RequestResponse" />
+                <om:Property Name="ReportToAnalyst" Value="True" />
+                <om:Property Name="Name" Value="Operation_1" />
+                <om:Property Name="Signal" Value="False" />
+                <om:Element Type="MessageRef" OID="f231bffd-8ddc-4219-aa7d-decb5b5a9da8" ParentLink="OperationDeclaration_RequestMessageRef" LowerBound="15.13" HigherBound="15.66">
+                    <om:Property Name="Ref" Value="ProductServices.Schemas.Procedure_dbo.UpdateInventory" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Request" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+                <om:Element Type="MessageRef" OID="c6168cf9-2456-4167-99d9-c432befc04e9" ParentLink="OperationDeclaration_ResponseMessageRef" LowerBound="15.68" HigherBound="15.129">
+                    <om:Property Name="Ref" Value="ProductServices.Schemas.Procedure_dbo.UpdateInventoryResponse" />
+                    <om:Property Name="ReportToAnalyst" Value="True" />
+                    <om:Property Name="Name" Value="Response" />
+                    <om:Property Name="Signal" Value="True" />
+                </om:Element>
+            </om:Element>
+        </om:Element>
+    </om:Element>
+</om:MetaModel>
+#endif // __DESIGNER_DATA
+[Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+module Orchestrations
+{
+    internal porttype ReceiveInventoryUpdatePortType
+    {
+        oneway Operation_1
+        {
+            Schemas.InventoryUpdate
+        };
+    };
+    internal porttype SendInventoryUpdatePortType
+    {
+        requestresponse Operation_1
+        {
+            ProductServices.Schemas.Procedure_dbo.UpdateInventory, ProductServices.Schemas.Procedure_dbo.UpdateInventoryResponse
+        };
+    };
+    [Microsoft.XLANGs.BaseTypes.BPELExportable(false)]
+    internal service ProcessInventoryUpdate
+    {
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port implements ReceiveInventoryUpdatePortType ReceiveInventoryUpdatePort;
+        [Microsoft.XLANGs.BaseTypes.LogicalBinding()]
+        port uses SendInventoryUpdatePortType SendInventoryUpdatePort;
+        message Schemas.InventoryUpdate InventoryUpdateInput;
+        message ProductServices.Schemas.Procedure_dbo.UpdateInventory InventoryUpdateOutput;
+        message ProductServices.Schemas.Procedure_dbo.UpdateInventoryResponse InventoryUpdateOutputResponse;
+        body ()
+        {
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("db78a648-c8d0-4270-9a19-3869f11a8182")]
+            activate receive (ReceiveInventoryUpdatePort.Operation_1, InventoryUpdateInput);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("516b0547-a3ea-4516-b109-b46a25ec5afa")]
+            construct InventoryUpdateOutput
+            {
+                [Microsoft.XLANGs.BaseTypes.DesignerPosition("a9f56550-fd68-41c2-94bb-28538135b6d8")]
+                transform (InventoryUpdateOutput) = Maps.InventoryUpdateToOutput (InventoryUpdateInput);
+            }
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("4627650b-c4df-40ed-ac98-3b9538c819d1")]
+            send (SendInventoryUpdatePort.Operation_1, InventoryUpdateOutput);
+            [Microsoft.XLANGs.BaseTypes.DesignerPosition("9f05de80-f4bc-4978-8bc5-8d8b710a22c8")]
+            receive (SendInventoryUpdatePort.Operation_1, InventoryUpdateOutputResponse);
+        }
+    }
+}
+
