@@ -1,0 +1,303 @@
+
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 4.8.3928.0
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+
+
+
+// Metadata version: v4.0.30319
+.assembly extern mscorlib
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly extern Microsoft.XLANGs.BizTalk.Engine
+{
+  .publickeytoken = (31 BF 38 56 AD 36 4E 35 )                         // 1.8V.6N5
+  .ver 3:0:1:0
+}
+.assembly extern Microsoft.XLANGs.BaseTypes
+{
+  .publickeytoken = (31 BF 38 56 AD 36 4E 35 )                         // 1.8V.6N5
+  .ver 3:0:1:0
+}
+.assembly extern Schemas
+{
+  .publickeytoken = (5F 4B 37 5D 9A 67 75 74 )                         // _K7].gut
+  .ver 1:0:0:0
+}
+.assembly Maps
+{
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+                                                                                                             63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
+
+  // --- The following custom attribute is added automatically, do not uncomment -------
+  //  .custom instance void [mscorlib]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 07 01 00 00 00 00 ) 
+
+  .custom instance void [mscorlib]System.Reflection.AssemblyTitleAttribute::.ctor(string) = ( 01 00 04 4D 61 70 73 00 00 )                      // ...Maps..
+  .custom instance void [mscorlib]System.Reflection.AssemblyDescriptionAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyProductAttribute::.ctor(string) = ( 01 00 04 4D 61 70 73 00 00 )                      // ...Maps..
+  .custom instance void [mscorlib]System.Reflection.AssemblyCopyrightAttribute::.ctor(string) = ( 01 00 12 43 6F 70 79 72 69 67 68 74 20 C2 A9 20   // ...Copyright .. 
+                                                                                                  20 32 30 32 35 00 00 )                            //  2025..
+  .custom instance void [mscorlib]System.Reflection.AssemblyTrademarkAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.BizTalkAssemblyAttribute::.ctor(class [mscorlib]System.Type) = ( 01 00 80 91 4D 69 63 72 6F 73 6F 66 74 2E 42 69   // ....Microsoft.Bi
+                                                                                                                                                7A 54 61 6C 6B 2E 58 4C 41 4E 47 73 2E 42 54 58   // zTalk.XLANGs.BTX
+                                                                                                                                                45 6E 67 69 6E 65 2E 42 54 58 53 65 72 76 69 63   // Engine.BTXServic
+                                                                                                                                                65 2C 20 4D 69 63 72 6F 73 6F 66 74 2E 58 4C 41   // e, Microsoft.XLA
+                                                                                                                                                4E 47 73 2E 42 69 7A 54 61 6C 6B 2E 45 6E 67 69   // NGs.BizTalk.Engi
+                                                                                                                                                6E 65 2C 20 56 65 72 73 69 6F 6E 3D 33 2E 30 2E   // ne, Version=3.0.
+                                                                                                                                                31 2E 30 2C 20 43 75 6C 74 75 72 65 3D 6E 65 75   // 1.0, Culture=neu
+                                                                                                                                                74 72 61 6C 2C 20 50 75 62 6C 69 63 4B 65 79 54   // tral, PublicKeyT
+                                                                                                                                                6F 6B 65 6E 3D 33 31 62 66 33 38 35 36 61 64 33   // oken=31bf3856ad3
+                                                                                                                                                36 34 65 33 35 00 00 )                            // 64e35..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComVisibleAttribute::.ctor(bool) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 63 30 34 66 36 61 38 38 2D 39 65 63 32   // ..$c04f6a88-9ec2
+                                                                                                  2D 34 32 32 61 2D 38 30 35 31 2D 37 37 65 34 62   // -422a-8051-77e4b
+                                                                                                  64 65 33 37 30 31 64 00 00 )                      // de3701d..
+  .custom instance void [mscorlib]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ( 01 00 07 31 2E 30 2E 30 2E 30 00 00 )             // ...1.0.0.0..
+  .custom instance void [mscorlib]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = ( 01 00 1C 2E 4E 45 54 46 72 61 6D 65 77 6F 72 6B   // ....NETFramework
+                                                                                                        2C 56 65 72 73 69 6F 6E 3D 76 34 2E 37 2E 32 01   // ,Version=v4.7.2.
+                                                                                                        00 54 0E 14 46 72 61 6D 65 77 6F 72 6B 44 69 73   // .T..FrameworkDis
+                                                                                                        70 6C 61 79 4E 61 6D 65 14 2E 4E 45 54 20 46 72   // playName..NET Fr
+                                                                                                        61 6D 65 77 6F 72 6B 20 34 2E 37 2E 32 )          // amework 4.7.2
+  .publickey = (00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00   // .$..............
+                00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00   // .$..RSA1........
+                AD 69 5A FF 88 A5 CD 60 13 48 2B C5 BA 58 BF 64   // .iZ....`.H+..X.d
+                16 E7 28 9D B7 F4 A4 55 31 FF 80 6A 13 92 CC 51   // ..(....U1..j...Q
+                93 C2 C4 1B A3 21 6B F0 9F BD 37 E3 73 0A A4 DD   // .....!k...7.s...
+                8F 24 44 BF DD 7F 1D DC 66 87 AB 1D 52 1F AF 50   // .$D.....f...R..P
+                64 E3 F7 0E 93 BF 13 ED 9A 5D 3D 99 5D 70 74 7F   // d........]=.]pt.
+                42 4D DC 0D 56 FB 25 E5 BB C0 4D 7A 18 A2 96 EB   // BM..V.%...Mz....
+                8E E8 06 C0 41 59 5A E8 E0 7A F6 10 3A 89 8D 80   // ....AYZ..z..:...
+                80 22 BD 9C 4F 59 FA 4B F6 4D E9 32 26 D3 AA D0 ) // ."..OY.K.M.2&...
+  .hash algorithm 0x00008004
+  .ver 1:0:0:0
+}
+.module Maps.dll
+// MVID: {C4BDCC1E-5560-468A-9AD0-513ED50D7D74}
+.imagebase 0x10000000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00000009    //  ILONLY
+// Image base: 0x06D20000
+
+
+// =============== CLASS MEMBERS DECLARATION ===================
+
+.class public auto ansi sealed beforefieldinit Maps.InventoryUpdateToOutput
+       extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.TransformBase
+{
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaReferenceAttribute::.ctor(string,
+                                                                                                               class [mscorlib]System.Type) = ( 01 00 17 53 63 68 65 6D 61 73 2E 49 6E 76 65 6E   // ...Schemas.Inven
+                                                                                                                                                74 6F 72 79 55 70 64 61 74 65 63 53 63 68 65 6D   // toryUpdatecSchem
+                                                                                                                                                61 73 2E 49 6E 76 65 6E 74 6F 72 79 55 70 64 61   // as.InventoryUpda
+                                                                                                                                                74 65 2C 20 53 63 68 65 6D 61 73 2C 20 56 65 72   // te, Schemas, Ver
+                                                                                                                                                73 69 6F 6E 3D 31 2E 30 2E 30 2E 30 2C 20 43 75   // sion=1.0.0.0, Cu
+                                                                                                                                                6C 74 75 72 65 3D 6E 65 75 74 72 61 6C 2C 20 50   // lture=neutral, P
+                                                                                                                                                75 62 6C 69 63 4B 65 79 54 6F 6B 65 6E 3D 35 66   // ublicKeyToken=5f
+                                                                                                                                                34 62 33 37 35 64 39 61 36 37 37 35 37 34 00 00 ) // 4b375d9a677574..
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaReferenceAttribute::.ctor(string,
+                                                                                                               class [mscorlib]System.Type) = ( 01 00 35 50 72 6F 64 75 63 74 53 65 72 76 69 63   // ..5ProductServic
+                                                                                                                                                65 73 2E 53 63 68 65 6D 61 73 2E 50 72 6F 63 65   // es.Schemas.Proce
+                                                                                                                                                64 75 72 65 5F 64 62 6F 2B 55 70 64 61 74 65 49   // dure_dbo+UpdateI
+                                                                                                                                                6E 76 65 6E 74 6F 72 79 80 81 50 72 6F 64 75 63   // nventory..Produc
+                                                                                                                                                74 53 65 72 76 69 63 65 73 2E 53 63 68 65 6D 61   // tServices.Schema
+                                                                                                                                                73 2E 50 72 6F 63 65 64 75 72 65 5F 64 62 6F 2B   // s.Procedure_dbo+
+                                                                                                                                                55 70 64 61 74 65 49 6E 76 65 6E 74 6F 72 79 2C   // UpdateInventory,
+                                                                                                                                                20 53 63 68 65 6D 61 73 2C 20 56 65 72 73 69 6F   //  Schemas, Versio
+                                                                                                                                                6E 3D 31 2E 30 2E 30 2E 30 2C 20 43 75 6C 74 75   // n=1.0.0.0, Cultu
+                                                                                                                                                72 65 3D 6E 65 75 74 72 61 6C 2C 20 50 75 62 6C   // re=neutral, Publ
+                                                                                                                                                69 63 4B 65 79 54 6F 6B 65 6E 3D 35 66 34 62 33   // icKeyToken=5f4b3
+                                                                                                                                                37 35 64 39 61 36 37 37 35 37 34 00 00 )          // 75d9a677574..
+  .field private static literal string _strMap = "<\?xml version=\"1.0\" encoding=\"UTF-16\"\?>\n<xsl:style"
+  + "sheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:msxsl=\"urn:schemas-microsoft-com:xsl"
+  + "t\" xmlns:var=\"http://schemas.microsoft.com/BizTalk/2003/var\" exclude-result-prefixes=\"msxsl var s"
+  + "0\" version=\"1.0\" xmlns:ns0=\"http://schemas.microsoft.com/Sql/2008/05/Procedures/dbo\" xmlns:ns3=\"h"
+  + "ttp://schemas.datacontract.org/2004/07/System.Data\" xmlns:s0=\"http://Schemas.InventoryUpdate\">\n  "
+  + "<xsl:output omit-xml-declaration=\"yes\" method=\"xml\" version=\"1.0\" />\n  <xsl:template match=\"/\">\n "
+  + "   <xsl:apply-templates select=\"/s0:InventoryUpdate\" />\n  </xsl:template>\n  <xsl:template match=\""
+  + "/s0:InventoryUpdate\">\n    <ns0:UpdateInventory>\n      <ns0:ProductName>\n        <xsl:value-of sel"
+  + "ect=\"ProductName/text()\" />\n      </ns0:ProductName>\n      <xsl:if test=\"SerialNumber\">\n        <"
+  + "ns0:SerialNumber>\n          <xsl:value-of select=\"SerialNumber/text()\" />\n        </ns0:SerialNum"
+  + "ber>\n      </xsl:if>\n      <ns0:QuantityChange>\n        <xsl:value-of select=\"QuantityChange/text"
+  + "()\" />\n      </ns0:QuantityChange>\n      <ns0:Location>\n        <xsl:value-of select=\"Location/te"
+  + "xt()\" />\n      </ns0:Location>\n      <ns0:UpdateDate>\n        <xsl:value-of select=\"UpdateDate/te"
+  + "xt()\" />\n      </ns0:UpdateDate>\n    </ns0:UpdateInventory>\n  </xsl:template>\n</xsl:stylesheet>"
+  .field private static literal string _xsltEngine = ""
+  .field private static literal int32 _useXSLTransform = int32(0x00000000)
+  .field private static literal string _strArgList = "<ExtensionObjects />"
+  .field private static literal string _strSrcSchemasList0 = "Schemas.InventoryUpdate"
+  .field private static literal class [Schemas]Schemas.InventoryUpdate _srcSchemaTypeReference0 = nullref
+  .field private static literal string _strTrgSchemasList0 = "ProductServices.Schemas.Procedure_dbo+UpdateInvent"
+  + "ory"
+  .field private static literal class [Schemas]ProductServices.Schemas.Procedure_dbo/UpdateInventory _trgSchemaTypeReference0 = nullref
+  .method public hidebysig specialname virtual 
+          instance string  get_XmlContent() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (string V_0)
+    IL_0000:  nop
+    IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"UTF-16\"\?>\n<xsl:style"
+    + "sheet xmlns:xsl=\"http://www.w3.org/1999/XSL/Transform\" xmlns:msxsl=\"urn"
+    + ":schemas-microsoft-com:xslt\" xmlns:var=\"http://schemas.microsoft.com/Bi"
+    + "zTalk/2003/var\" exclude-result-prefixes=\"msxsl var s0\" version=\"1.0\" xm"
+    + "lns:ns0=\"http://schemas.microsoft.com/Sql/2008/05/Procedures/dbo\" xmlns"
+    + ":ns3=\"http://schemas.datacontract.org/2004/07/System.Data\" xmlns:s0=\"ht"
+    + "tp://Schemas.InventoryUpdate\">\n  <xsl:output omit-xml-declaration=\"yes\""
+    + " method=\"xml\" version=\"1.0\" />\n  <xsl:template match=\"/\">\n    <xsl:appl"
+    + "y-templates select=\"/s0:InventoryUpdate\" />\n  </xsl:template>\n  <xsl:te"
+    + "mplate match=\"/s0:InventoryUpdate\">\n    <ns0:UpdateInventory>\n      <ns"
+    + "0:ProductName>\n        <xsl:value-of select=\"ProductName/text()\" />\n   "
+    + "   </ns0:ProductName>\n      <xsl:if test=\"SerialNumber\">\n        <ns0:S"
+    + "erialNumber>\n          <xsl:value-of select=\"SerialNumber/text()\" />\n  "
+    + "      </ns0:SerialNumber>\n      </xsl:if>\n      <ns0:QuantityChange>\n  "
+    + "      <xsl:value-of select=\"QuantityChange/text()\" />\n      </ns0:Quant"
+    + "ityChange>\n      <ns0:Location>\n        <xsl:value-of select=\"Location/"
+    + "text()\" />\n      </ns0:Location>\n      <ns0:UpdateDate>\n        <xsl:va"
+    + "lue-of select=\"UpdateDate/text()\" />\n      </ns0:UpdateDate>\n    </ns0:"
+    + "UpdateInventory>\n  </xsl:template>\n</xsl:stylesheet>"
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method InventoryUpdateToOutput::get_XmlContent
+
+  .method public hidebysig specialname virtual 
+          instance string  get_XsltEngine() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (string V_0)
+    IL_0000:  nop
+    IL_0001:  ldstr      ""
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method InventoryUpdateToOutput::get_XsltEngine
+
+  .method public hidebysig specialname virtual 
+          instance int32  get_UseXSLTransform() cil managed
+  {
+    // Code size       7 (0x7)
+    .maxstack  1
+    .locals init (int32 V_0)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.0
+    IL_0002:  stloc.0
+    IL_0003:  br.s       IL_0005
+
+    IL_0005:  ldloc.0
+    IL_0006:  ret
+  } // end of method InventoryUpdateToOutput::get_UseXSLTransform
+
+  .method public hidebysig specialname virtual 
+          instance string  get_XsltArgumentListContent() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (string V_0)
+    IL_0000:  nop
+    IL_0001:  ldstr      "<ExtensionObjects />"
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method InventoryUpdateToOutput::get_XsltArgumentListContent
+
+  .method public hidebysig specialname virtual 
+          instance string[]  get_SourceSchemas() cil managed
+  {
+    // Code size       22 (0x16)
+    .maxstack  3
+    .locals init (string[] V_0,
+             string[] V_1)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.1
+    IL_0002:  newarr     [mscorlib]System.String
+    IL_0007:  stloc.0
+    IL_0008:  ldloc.0
+    IL_0009:  ldc.i4.0
+    IL_000a:  ldstr      "Schemas.InventoryUpdate"
+    IL_000f:  stelem.ref
+    IL_0010:  ldloc.0
+    IL_0011:  stloc.1
+    IL_0012:  br.s       IL_0014
+
+    IL_0014:  ldloc.1
+    IL_0015:  ret
+  } // end of method InventoryUpdateToOutput::get_SourceSchemas
+
+  .method public hidebysig specialname virtual 
+          instance string[]  get_TargetSchemas() cil managed
+  {
+    // Code size       22 (0x16)
+    .maxstack  3
+    .locals init (string[] V_0,
+             string[] V_1)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.1
+    IL_0002:  newarr     [mscorlib]System.String
+    IL_0007:  stloc.0
+    IL_0008:  ldloc.0
+    IL_0009:  ldc.i4.0
+    IL_000a:  ldstr      "ProductServices.Schemas.Procedure_dbo+UpdateInvent"
+    + "ory"
+    IL_000f:  stelem.ref
+    IL_0010:  ldloc.0
+    IL_0011:  stloc.1
+    IL_0012:  br.s       IL_0014
+
+    IL_0014:  ldloc.1
+    IL_0015:  ret
+  } // end of method InventoryUpdateToOutput::get_TargetSchemas
+
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       8 (0x8)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.TransformBase::.ctor()
+    IL_0006:  nop
+    IL_0007:  ret
+  } // end of method InventoryUpdateToOutput::.ctor
+
+  .property instance string XmlContent()
+  {
+    .get instance string Maps.InventoryUpdateToOutput::get_XmlContent()
+  } // end of property InventoryUpdateToOutput::XmlContent
+  .property instance string XsltEngine()
+  {
+    .get instance string Maps.InventoryUpdateToOutput::get_XsltEngine()
+  } // end of property InventoryUpdateToOutput::XsltEngine
+  .property instance int32 UseXSLTransform()
+  {
+    .get instance int32 Maps.InventoryUpdateToOutput::get_UseXSLTransform()
+  } // end of property InventoryUpdateToOutput::UseXSLTransform
+  .property instance string XsltArgumentListContent()
+  {
+    .get instance string Maps.InventoryUpdateToOutput::get_XsltArgumentListContent()
+  } // end of property InventoryUpdateToOutput::XsltArgumentListContent
+  .property instance string[] SourceSchemas()
+  {
+    .get instance string[] Maps.InventoryUpdateToOutput::get_SourceSchemas()
+  } // end of property InventoryUpdateToOutput::SourceSchemas
+  .property instance string[] TargetSchemas()
+  {
+    .get instance string[] Maps.InventoryUpdateToOutput::get_TargetSchemas()
+  } // end of property InventoryUpdateToOutput::TargetSchemas
+} // end of class Maps.InventoryUpdateToOutput
+
+
+// =============================================================
+
+// *********** DISASSEMBLY COMPLETE ***********************
+// WARNING: Created Win32 resource file c:\Projects\IntegrationIdea01\bin\Maps.res
