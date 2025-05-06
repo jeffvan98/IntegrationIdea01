@@ -1,0 +1,1061 @@
+
+//  Microsoft (R) .NET Framework IL Disassembler.  Version 4.8.3928.0
+//  Copyright (c) Microsoft Corporation.  All rights reserved.
+
+
+
+// Metadata version: v4.0.30319
+.assembly extern mscorlib
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly extern Microsoft.XLANGs.BizTalk.Engine
+{
+  .publickeytoken = (31 BF 38 56 AD 36 4E 35 )                         // 1.8V.6N5
+  .ver 3:0:1:0
+}
+.assembly extern Microsoft.XLANGs.BaseTypes
+{
+  .publickeytoken = (31 BF 38 56 AD 36 4E 35 )                         // 1.8V.6N5
+  .ver 3:0:1:0
+}
+.assembly extern System
+{
+  .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
+  .ver 4:0:0:0
+}
+.assembly Schemas
+{
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
+                                                                                                             63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
+
+  // --- The following custom attribute is added automatically, do not uncomment -------
+  //  .custom instance void [mscorlib]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 07 01 00 00 00 00 ) 
+
+  .custom instance void [mscorlib]System.Reflection.AssemblyTitleAttribute::.ctor(string) = ( 01 00 07 53 63 68 65 6D 61 73 00 00 )             // ...Schemas..
+  .custom instance void [mscorlib]System.Reflection.AssemblyDescriptionAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyConfigurationAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyCompanyAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Reflection.AssemblyProductAttribute::.ctor(string) = ( 01 00 07 53 63 68 65 6D 61 73 00 00 )             // ...Schemas..
+  .custom instance void [mscorlib]System.Reflection.AssemblyCopyrightAttribute::.ctor(string) = ( 01 00 12 43 6F 70 79 72 69 67 68 74 20 C2 A9 20   // ...Copyright .. 
+                                                                                                  20 32 30 32 35 00 00 )                            //  2025..
+  .custom instance void [mscorlib]System.Reflection.AssemblyTrademarkAttribute::.ctor(string) = ( 01 00 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.BizTalkAssemblyAttribute::.ctor(class [mscorlib]System.Type) = ( 01 00 80 91 4D 69 63 72 6F 73 6F 66 74 2E 42 69   // ....Microsoft.Bi
+                                                                                                                                                7A 54 61 6C 6B 2E 58 4C 41 4E 47 73 2E 42 54 58   // zTalk.XLANGs.BTX
+                                                                                                                                                45 6E 67 69 6E 65 2E 42 54 58 53 65 72 76 69 63   // Engine.BTXServic
+                                                                                                                                                65 2C 20 4D 69 63 72 6F 73 6F 66 74 2E 58 4C 41   // e, Microsoft.XLA
+                                                                                                                                                4E 47 73 2E 42 69 7A 54 61 6C 6B 2E 45 6E 67 69   // NGs.BizTalk.Engi
+                                                                                                                                                6E 65 2C 20 56 65 72 73 69 6F 6E 3D 33 2E 30 2E   // ne, Version=3.0.
+                                                                                                                                                31 2E 30 2C 20 43 75 6C 74 75 72 65 3D 6E 65 75   // 1.0, Culture=neu
+                                                                                                                                                74 72 61 6C 2C 20 50 75 62 6C 69 63 4B 65 79 54   // tral, PublicKeyT
+                                                                                                                                                6F 6B 65 6E 3D 33 31 62 66 33 38 35 36 61 64 33   // oken=31bf3856ad3
+                                                                                                                                                36 34 65 33 35 00 00 )                            // 64e35..
+  .custom instance void [mscorlib]System.Runtime.InteropServices.ComVisibleAttribute::.ctor(bool) = ( 01 00 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.InteropServices.GuidAttribute::.ctor(string) = ( 01 00 24 36 34 32 65 38 33 34 66 2D 31 63 35 33   // ..$642e834f-1c53
+                                                                                                  2D 34 32 35 34 2D 62 38 34 66 2D 63 64 66 62 36   // -4254-b84f-cdfb6
+                                                                                                  32 33 66 61 34 31 65 00 00 )                      // 23fa41e..
+  .custom instance void [mscorlib]System.Reflection.AssemblyFileVersionAttribute::.ctor(string) = ( 01 00 07 31 2E 30 2E 30 2E 30 00 00 )             // ...1.0.0.0..
+  .custom instance void [mscorlib]System.Runtime.Versioning.TargetFrameworkAttribute::.ctor(string) = ( 01 00 1C 2E 4E 45 54 46 72 61 6D 65 77 6F 72 6B   // ....NETFramework
+                                                                                                        2C 56 65 72 73 69 6F 6E 3D 76 34 2E 37 2E 32 01   // ,Version=v4.7.2.
+                                                                                                        00 54 0E 14 46 72 61 6D 65 77 6F 72 6B 44 69 73   // .T..FrameworkDis
+                                                                                                        70 6C 61 79 4E 61 6D 65 14 2E 4E 45 54 20 46 72   // playName..NET Fr
+                                                                                                        61 6D 65 77 6F 72 6B 20 34 2E 37 2E 32 )          // amework 4.7.2
+  .publickey = (00 24 00 00 04 80 00 00 94 00 00 00 06 02 00 00   // .$..............
+                00 24 00 00 52 53 41 31 00 04 00 00 01 00 01 00   // .$..RSA1........
+                AD 69 5A FF 88 A5 CD 60 13 48 2B C5 BA 58 BF 64   // .iZ....`.H+..X.d
+                16 E7 28 9D B7 F4 A4 55 31 FF 80 6A 13 92 CC 51   // ..(....U1..j...Q
+                93 C2 C4 1B A3 21 6B F0 9F BD 37 E3 73 0A A4 DD   // .....!k...7.s...
+                8F 24 44 BF DD 7F 1D DC 66 87 AB 1D 52 1F AF 50   // .$D.....f...R..P
+                64 E3 F7 0E 93 BF 13 ED 9A 5D 3D 99 5D 70 74 7F   // d........]=.]pt.
+                42 4D DC 0D 56 FB 25 E5 BB C0 4D 7A 18 A2 96 EB   // BM..V.%...Mz....
+                8E E8 06 C0 41 59 5A E8 E0 7A F6 10 3A 89 8D 80   // ....AYZ..z..:...
+                80 22 BD 9C 4F 59 FA 4B F6 4D E9 32 26 D3 AA D0 ) // ."..OY.K.M.2&...
+  .hash algorithm 0x00008004
+  .ver 1:0:0:0
+}
+.module Schemas.dll
+// MVID: {21043FF1-1859-40FE-9E9E-D087C03BDFB1}
+.imagebase 0x10000000
+.file alignment 0x00000200
+.stackreserve 0x00100000
+.subsystem 0x0003       // WINDOWS_CUI
+.corflags 0x00000009    //  ILONLY
+// Image base: 0x05B40000
+
+
+// =============== CLASS MEMBERS DECLARATION ===================
+
+.class public auto ansi serializable sealed beforefieldinit ProductServices.Schemas.DataSetSchema
+       extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase
+{
+  .custom instance void [System]System.CodeDom.Compiler.GeneratedCodeAttribute::.ctor(string,
+                                                                                      string) = ( 01 00 21 4D 69 63 72 6F 73 6F 66 74 2E 42 69 7A   // ..!Microsoft.Biz
+                                                                                                  54 61 6C 6B 2E 53 63 68 65 6D 61 2E 43 6F 6D 70   // Talk.Schema.Comp
+                                                                                                  69 6C 65 72 07 33 2E 30 2E 31 2E 30 00 00 )       // iler.3.0.1.0..
+  .custom instance void [mscorlib]System.Diagnostics.DebuggerNonUserCodeAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaTypeAttribute::.ctor(valuetype [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaTypeEnum) = ( 01 00 02 00 00 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaRootsAttribute::.ctor(string[]) = ( 01 00 02 00 00 00 07 44 61 74 61 53 65 74 0E 41   // .......DataSet.A
+                                                                                                                         72 72 61 79 4F 66 44 61 74 61 53 65 74 00 00 )    // rrayOfDataSet..
+  .class auto ansi serializable sealed nested public beforefieldinit DataSet
+         extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase
+  {
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaAttribute::.ctor(string,
+                                                                                                        string) = ( 01 00 33 68 74 74 70 3A 2F 2F 73 63 68 65 6D 61   // ..3http://schema
+                                                                                                                    73 2E 64 61 74 61 63 6F 6E 74 72 61 63 74 2E 6F   // s.datacontract.o
+                                                                                                                    72 67 2F 32 30 30 34 2F 30 37 2F 53 79 73 74 65   // rg/2004/07/Syste
+                                                                                                                    6D 2E 44 61 74 61 07 44 61 74 61 53 65 74 00 00 ) // m.Data.DataSet..
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaRootsAttribute::.ctor(string[]) = ( 01 00 01 00 00 00 07 44 61 74 61 53 65 74 00 00 ) // .......DataSet..
+    .field private static notserialized object _rawSchema
+    .method public hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       9 (0x9)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase::.ctor()
+      IL_0006:  nop
+      IL_0007:  nop
+      IL_0008:  ret
+    } // end of method DataSet::.ctor
+
+    .method public hidebysig specialname virtual 
+            instance string  get_XmlContent() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (string V_0)
+      IL_0000:  nop
+      IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<schema xm"
+      + "lns:b=\"http://schemas.microsoft.com/BizTalk/2003\" xmlns:tns=\"http://sch"
+      + "emas.datacontract.org/2004/07/System.Data\" elementFormDefault=\"qualifie"
+      + "d\" targetNamespace=\"http://schemas.datacontract.org/2004/07/System.Data"
+      + "\" xmlns=\"http://www.w3.org/2001/XMLSchema\">\n  <annotation>\n    <appinfo"
+      + ">\n      <fileNameHint xmlns=\"http://schemas.microsoft.com/servicemodel/"
+      + "adapters/metadata/xsd\">DataSetSchema</fileNameHint>\n    </appinfo>\n  </"
+      + "annotation>\n  <complexType name=\"DataSet\">\n    <annotation>\n      <appi"
+      + "nfo>\n        <ActualType Name=\"DataSet\" Namespace=\"http://schemas.datac"
+      + "ontract.org/2004/07/System.Data\" xmlns=\"http://schemas.microsoft.com/20"
+      + "03/10/Serialization/\">\n        </ActualType>\n      </appinfo>\n    </ann"
+      + "otation>\n    <sequence>\n      <any />\n      <any />\n    </sequence>\n  <"
+      + "/complexType>\n  <element name=\"DataSet\" nillable=\"true\" type=\"tns:DataS"
+      + "et\" />\n  <complexType name=\"ArrayOfDataSet\">\n    <sequence>\n      <elem"
+      + "ent minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"DataSet\" type=\"tns:DataSe"
+      + "t\" />\n    </sequence>\n  </complexType>\n  <element name=\"ArrayOfDataSet\""
+      + " nillable=\"true\" type=\"tns:ArrayOfDataSet\" />\n</schema>"
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method DataSet::get_XmlContent
+
+    .method public hidebysig specialname virtual 
+            instance string[]  get_RootNodes() cil managed
+    {
+      // Code size       22 (0x16)
+      .maxstack  3
+      .locals init (string[] V_0,
+               string[] V_1)
+      IL_0000:  nop
+      IL_0001:  ldc.i4.1
+      IL_0002:  newarr     [mscorlib]System.String
+      IL_0007:  stloc.0
+      IL_0008:  ldloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  ldstr      "DataSet"
+      IL_000f:  stelem.ref
+      IL_0010:  ldloc.0
+      IL_0011:  stloc.1
+      IL_0012:  br.s       IL_0014
+
+      IL_0014:  ldloc.1
+      IL_0015:  ret
+    } // end of method DataSet::get_RootNodes
+
+    .method family hidebysig specialname virtual 
+            instance object  get_RawSchema() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (object V_0)
+      IL_0000:  nop
+      IL_0001:  ldsfld     object ProductServices.Schemas.DataSetSchema/DataSet::_rawSchema
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method DataSet::get_RawSchema
+
+    .method family hidebysig specialname virtual 
+            instance void  set_RawSchema(object 'value') cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  nop
+      IL_0001:  ldarg.1
+      IL_0002:  stsfld     object ProductServices.Schemas.DataSetSchema/DataSet::_rawSchema
+      IL_0007:  ret
+    } // end of method DataSet::set_RawSchema
+
+    .property instance string XmlContent()
+    {
+      .get instance string ProductServices.Schemas.DataSetSchema/DataSet::get_XmlContent()
+    } // end of property DataSet::XmlContent
+    .property instance string[] RootNodes()
+    {
+      .get instance string[] ProductServices.Schemas.DataSetSchema/DataSet::get_RootNodes()
+    } // end of property DataSet::RootNodes
+    .property instance object RawSchema()
+    {
+      .get instance object ProductServices.Schemas.DataSetSchema/DataSet::get_RawSchema()
+      .set instance void ProductServices.Schemas.DataSetSchema/DataSet::set_RawSchema(object)
+    } // end of property DataSet::RawSchema
+  } // end of class DataSet
+
+  .class auto ansi serializable sealed nested public beforefieldinit ArrayOfDataSet
+         extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase
+  {
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaAttribute::.ctor(string,
+                                                                                                        string) = ( 01 00 33 68 74 74 70 3A 2F 2F 73 63 68 65 6D 61   // ..3http://schema
+                                                                                                                    73 2E 64 61 74 61 63 6F 6E 74 72 61 63 74 2E 6F   // s.datacontract.o
+                                                                                                                    72 67 2F 32 30 30 34 2F 30 37 2F 53 79 73 74 65   // rg/2004/07/Syste
+                                                                                                                    6D 2E 44 61 74 61 0E 41 72 72 61 79 4F 66 44 61   // m.Data.ArrayOfDa
+                                                                                                                    74 61 53 65 74 00 00 )                            // taSet..
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaRootsAttribute::.ctor(string[]) = ( 01 00 01 00 00 00 0E 41 72 72 61 79 4F 66 44 61   // .......ArrayOfDa
+                                                                                                                           74 61 53 65 74 00 00 )                            // taSet..
+    .field private static notserialized object _rawSchema
+    .method public hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       9 (0x9)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase::.ctor()
+      IL_0006:  nop
+      IL_0007:  nop
+      IL_0008:  ret
+    } // end of method ArrayOfDataSet::.ctor
+
+    .method public hidebysig specialname virtual 
+            instance string  get_XmlContent() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (string V_0)
+      IL_0000:  nop
+      IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<schema xm"
+      + "lns:b=\"http://schemas.microsoft.com/BizTalk/2003\" xmlns:tns=\"http://sch"
+      + "emas.datacontract.org/2004/07/System.Data\" elementFormDefault=\"qualifie"
+      + "d\" targetNamespace=\"http://schemas.datacontract.org/2004/07/System.Data"
+      + "\" xmlns=\"http://www.w3.org/2001/XMLSchema\">\n  <annotation>\n    <appinfo"
+      + ">\n      <fileNameHint xmlns=\"http://schemas.microsoft.com/servicemodel/"
+      + "adapters/metadata/xsd\">DataSetSchema</fileNameHint>\n    </appinfo>\n  </"
+      + "annotation>\n  <complexType name=\"DataSet\">\n    <annotation>\n      <appi"
+      + "nfo>\n        <ActualType Name=\"DataSet\" Namespace=\"http://schemas.datac"
+      + "ontract.org/2004/07/System.Data\" xmlns=\"http://schemas.microsoft.com/20"
+      + "03/10/Serialization/\">\n        </ActualType>\n      </appinfo>\n    </ann"
+      + "otation>\n    <sequence>\n      <any />\n      <any />\n    </sequence>\n  <"
+      + "/complexType>\n  <element name=\"DataSet\" nillable=\"true\" type=\"tns:DataS"
+      + "et\" />\n  <complexType name=\"ArrayOfDataSet\">\n    <sequence>\n      <elem"
+      + "ent minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"DataSet\" type=\"tns:DataSe"
+      + "t\" />\n    </sequence>\n  </complexType>\n  <element name=\"ArrayOfDataSet\""
+      + " nillable=\"true\" type=\"tns:ArrayOfDataSet\" />\n</schema>"
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method ArrayOfDataSet::get_XmlContent
+
+    .method public hidebysig specialname virtual 
+            instance string[]  get_RootNodes() cil managed
+    {
+      // Code size       22 (0x16)
+      .maxstack  3
+      .locals init (string[] V_0,
+               string[] V_1)
+      IL_0000:  nop
+      IL_0001:  ldc.i4.1
+      IL_0002:  newarr     [mscorlib]System.String
+      IL_0007:  stloc.0
+      IL_0008:  ldloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  ldstr      "ArrayOfDataSet"
+      IL_000f:  stelem.ref
+      IL_0010:  ldloc.0
+      IL_0011:  stloc.1
+      IL_0012:  br.s       IL_0014
+
+      IL_0014:  ldloc.1
+      IL_0015:  ret
+    } // end of method ArrayOfDataSet::get_RootNodes
+
+    .method family hidebysig specialname virtual 
+            instance object  get_RawSchema() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (object V_0)
+      IL_0000:  nop
+      IL_0001:  ldsfld     object ProductServices.Schemas.DataSetSchema/ArrayOfDataSet::_rawSchema
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method ArrayOfDataSet::get_RawSchema
+
+    .method family hidebysig specialname virtual 
+            instance void  set_RawSchema(object 'value') cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  nop
+      IL_0001:  ldarg.1
+      IL_0002:  stsfld     object ProductServices.Schemas.DataSetSchema/ArrayOfDataSet::_rawSchema
+      IL_0007:  ret
+    } // end of method ArrayOfDataSet::set_RawSchema
+
+    .property instance string XmlContent()
+    {
+      .get instance string ProductServices.Schemas.DataSetSchema/ArrayOfDataSet::get_XmlContent()
+    } // end of property ArrayOfDataSet::XmlContent
+    .property instance string[] RootNodes()
+    {
+      .get instance string[] ProductServices.Schemas.DataSetSchema/ArrayOfDataSet::get_RootNodes()
+    } // end of property ArrayOfDataSet::RootNodes
+    .property instance object RawSchema()
+    {
+      .get instance object ProductServices.Schemas.DataSetSchema/ArrayOfDataSet::get_RawSchema()
+      .set instance void ProductServices.Schemas.DataSetSchema/ArrayOfDataSet::set_RawSchema(object)
+    } // end of property ArrayOfDataSet::RawSchema
+  } // end of class ArrayOfDataSet
+
+  .field private static notserialized object _rawSchema
+  .field private static literal notserialized string _strSchema = "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<schema xm"
+  + "lns:b=\"http://schemas.microsoft.com/BizTalk/2003\" xmlns:tns=\"http://schemas.datacontract.org/2004/07/System.Data\" "
+  + "elementFormDefault=\"qualified\" targetNamespace=\"http://schemas.datacontract.org/2004/07/System.Data\" xmlns=\"http:/"
+  + "/www.w3.org/2001/XMLSchema\">\n  <annotation>\n    <appinfo>\n      <fileNameHint xmlns=\"http://schemas.microsoft.com/"
+  + "servicemodel/adapters/metadata/xsd\">DataSetSchema</fileNameHint>\n    </appinfo>\n  </annotation>\n  <complexType nam"
+  + "e=\"DataSet\">\n    <annotation>\n      <appinfo>\n        <ActualType Name=\"DataSet\" Namespace=\"http://schemas.datacon"
+  + "tract.org/2004/07/System.Data\" xmlns=\"http://schemas.microsoft.com/2003/10/Serialization/\">\n        </ActualType>\n"
+  + "      </appinfo>\n    </annotation>\n    <sequence>\n      <any />\n      <any />\n    </sequence>\n  </complexType>\n  <"
+  + "element name=\"DataSet\" nillable=\"true\" type=\"tns:DataSet\" />\n  <complexType name=\"ArrayOfDataSet\">\n    <sequence>\n"
+  + "      <element minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"DataSet\" type=\"tns:DataSet\" />\n    </sequence>\n  </comple"
+  + "xType>\n  <element name=\"ArrayOfDataSet\" nillable=\"true\" type=\"tns:ArrayOfDataSet\" />\n</schema>"
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase::.ctor()
+    IL_0006:  nop
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method DataSetSchema::.ctor
+
+  .method public hidebysig specialname virtual 
+          instance string  get_XmlContent() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (string V_0)
+    IL_0000:  nop
+    IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<schema xm"
+    + "lns:b=\"http://schemas.microsoft.com/BizTalk/2003\" xmlns:tns=\"http://sch"
+    + "emas.datacontract.org/2004/07/System.Data\" elementFormDefault=\"qualifie"
+    + "d\" targetNamespace=\"http://schemas.datacontract.org/2004/07/System.Data"
+    + "\" xmlns=\"http://www.w3.org/2001/XMLSchema\">\n  <annotation>\n    <appinfo"
+    + ">\n      <fileNameHint xmlns=\"http://schemas.microsoft.com/servicemodel/"
+    + "adapters/metadata/xsd\">DataSetSchema</fileNameHint>\n    </appinfo>\n  </"
+    + "annotation>\n  <complexType name=\"DataSet\">\n    <annotation>\n      <appi"
+    + "nfo>\n        <ActualType Name=\"DataSet\" Namespace=\"http://schemas.datac"
+    + "ontract.org/2004/07/System.Data\" xmlns=\"http://schemas.microsoft.com/20"
+    + "03/10/Serialization/\">\n        </ActualType>\n      </appinfo>\n    </ann"
+    + "otation>\n    <sequence>\n      <any />\n      <any />\n    </sequence>\n  <"
+    + "/complexType>\n  <element name=\"DataSet\" nillable=\"true\" type=\"tns:DataS"
+    + "et\" />\n  <complexType name=\"ArrayOfDataSet\">\n    <sequence>\n      <elem"
+    + "ent minOccurs=\"0\" maxOccurs=\"unbounded\" name=\"DataSet\" type=\"tns:DataSe"
+    + "t\" />\n    </sequence>\n  </complexType>\n  <element name=\"ArrayOfDataSet\""
+    + " nillable=\"true\" type=\"tns:ArrayOfDataSet\" />\n</schema>"
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method DataSetSchema::get_XmlContent
+
+  .method public hidebysig specialname virtual 
+          instance string[]  get_RootNodes() cil managed
+  {
+    // Code size       30 (0x1e)
+    .maxstack  3
+    .locals init (string[] V_0,
+             string[] V_1)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.2
+    IL_0002:  newarr     [mscorlib]System.String
+    IL_0007:  stloc.0
+    IL_0008:  ldloc.0
+    IL_0009:  ldc.i4.0
+    IL_000a:  ldstr      "DataSet"
+    IL_000f:  stelem.ref
+    IL_0010:  ldloc.0
+    IL_0011:  ldc.i4.1
+    IL_0012:  ldstr      "ArrayOfDataSet"
+    IL_0017:  stelem.ref
+    IL_0018:  ldloc.0
+    IL_0019:  stloc.1
+    IL_001a:  br.s       IL_001c
+
+    IL_001c:  ldloc.1
+    IL_001d:  ret
+  } // end of method DataSetSchema::get_RootNodes
+
+  .method family hidebysig specialname virtual 
+          instance object  get_RawSchema() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (object V_0)
+    IL_0000:  nop
+    IL_0001:  ldsfld     object ProductServices.Schemas.DataSetSchema::_rawSchema
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method DataSetSchema::get_RawSchema
+
+  .method family hidebysig specialname virtual 
+          instance void  set_RawSchema(object 'value') cil managed
+  {
+    // Code size       8 (0x8)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.1
+    IL_0002:  stsfld     object ProductServices.Schemas.DataSetSchema::_rawSchema
+    IL_0007:  ret
+  } // end of method DataSetSchema::set_RawSchema
+
+  .property instance string XmlContent()
+  {
+    .get instance string ProductServices.Schemas.DataSetSchema::get_XmlContent()
+  } // end of property DataSetSchema::XmlContent
+  .property instance string[] RootNodes()
+  {
+    .get instance string[] ProductServices.Schemas.DataSetSchema::get_RootNodes()
+  } // end of property DataSetSchema::RootNodes
+  .property instance object RawSchema()
+  {
+    .get instance object ProductServices.Schemas.DataSetSchema::get_RawSchema()
+    .set instance void ProductServices.Schemas.DataSetSchema::set_RawSchema(object)
+  } // end of property DataSetSchema::RawSchema
+} // end of class ProductServices.Schemas.DataSetSchema
+
+.class public auto ansi serializable sealed beforefieldinit ProductServices.Schemas.Procedure_dbo
+       extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase
+{
+  .custom instance void [System]System.CodeDom.Compiler.GeneratedCodeAttribute::.ctor(string,
+                                                                                      string) = ( 01 00 21 4D 69 63 72 6F 73 6F 66 74 2E 42 69 7A   // ..!Microsoft.Biz
+                                                                                                  54 61 6C 6B 2E 53 63 68 65 6D 61 2E 43 6F 6D 70   // Talk.Schema.Comp
+                                                                                                  69 6C 65 72 07 33 2E 30 2E 31 2E 30 00 00 )       // iler.3.0.1.0..
+  .custom instance void [mscorlib]System.Diagnostics.DebuggerNonUserCodeAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaTypeAttribute::.ctor(valuetype [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaTypeEnum) = ( 01 00 02 00 00 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaRootsAttribute::.ctor(string[]) = ( 01 00 02 00 00 00 0F 55 70 64 61 74 65 49 6E 76   // .......UpdateInv
+                                                                                                                         65 6E 74 6F 72 79 17 55 70 64 61 74 65 49 6E 76   // entory.UpdateInv
+                                                                                                                         65 6E 74 6F 72 79 52 65 73 70 6F 6E 73 65 00 00 ) // entoryResponse..
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaReferenceAttribute::.ctor(string,
+                                                                                                               class [mscorlib]System.Type) = ( 01 00 25 50 72 6F 64 75 63 74 53 65 72 76 69 63   // ..%ProductServic
+                                                                                                                                                65 73 2E 53 63 68 65 6D 61 73 2E 44 61 74 61 53   // es.Schemas.DataS
+                                                                                                                                                65 74 53 63 68 65 6D 61 25 50 72 6F 64 75 63 74   // etSchema%Product
+                                                                                                                                                53 65 72 76 69 63 65 73 2E 53 63 68 65 6D 61 73   // Services.Schemas
+                                                                                                                                                2E 44 61 74 61 53 65 74 53 63 68 65 6D 61 00 00 ) // .DataSetSchema..
+  .class auto ansi serializable sealed nested public beforefieldinit UpdateInventory
+         extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase
+  {
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaAttribute::.ctor(string,
+                                                                                                        string) = ( 01 00 37 68 74 74 70 3A 2F 2F 73 63 68 65 6D 61   // ..7http://schema
+                                                                                                                    73 2E 6D 69 63 72 6F 73 6F 66 74 2E 63 6F 6D 2F   // s.microsoft.com/
+                                                                                                                    53 71 6C 2F 32 30 30 38 2F 30 35 2F 50 72 6F 63   // Sql/2008/05/Proc
+                                                                                                                    65 64 75 72 65 73 2F 64 62 6F 0F 55 70 64 61 74   // edures/dbo.Updat
+                                                                                                                    65 49 6E 76 65 6E 74 6F 72 79 00 00 )             // eInventory..
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaRootsAttribute::.ctor(string[]) = ( 01 00 01 00 00 00 0F 55 70 64 61 74 65 49 6E 76   // .......UpdateInv
+                                                                                                                           65 6E 74 6F 72 79 00 00 )                         // entory..
+    .field private static notserialized object _rawSchema
+    .method public hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       9 (0x9)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase::.ctor()
+      IL_0006:  nop
+      IL_0007:  nop
+      IL_0008:  ret
+    } // end of method UpdateInventory::.ctor
+
+    .method public hidebysig specialname virtual 
+            instance string  get_XmlContent() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (string V_0)
+      IL_0000:  nop
+      IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<xs:schema"
+      + " xmlns:ns3=\"http://schemas.datacontract.org/2004/07/System.Data\" xmlns:"
+      + "b=\"http://schemas.microsoft.com/BizTalk/2003\" elementFormDefault=\"quali"
+      + "fied\" targetNamespace=\"http://schemas.microsoft.com/Sql/2008/05/Procedu"
+      + "res/dbo\" version=\"1.0\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <"
+      + "xs:import schemaLocation=\"ProductServices.Schemas.DataSetSchema\" namesp"
+      + "ace=\"http://schemas.datacontract.org/2004/07/System.Data\" />\n  <xs:anno"
+      + "tation>\n    <xs:appinfo>\n      <fileNameHint xmlns=\"http://schemas.micr"
+      + "osoft.com/servicemodel/adapters/metadata/xsd\">Procedure.dbo</fileNameHi"
+      + "nt>\n      <references xmlns=\"http://schemas.microsoft.com/BizTalk/2003\""
+      + ">\n        <reference targetNamespace=\"http://schemas.datacontract.org/2"
+      + "004/07/System.Data\" />\n      </references>\n    </xs:appinfo>\n  </xs:ann"
+      + "otation>\n  <xs:element name=\"UpdateInventory\">\n    <xs:annotation>\n    "
+      + "  <xs:documentation>\n        <doc:action xmlns:doc=\"http://schemas.micr"
+      + "osoft.com/servicemodel/adapters/metadata/documentation\">Procedure/dbo/U"
+      + "pdateInventory</doc:action>\n      </xs:documentation>\n    </xs:annotati"
+      + "on>\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element minOcc"
+      + "urs=\"0\" maxOccurs=\"1\" name=\"ProductName\" nillable=\"true\">\n          <xs"
+      + ":simpleType>\n            <xs:restriction base=\"xs:string\">\n            "
+      + "  <xs:maxLength value=\"255\" />\n            </xs:restriction>\n          "
+      + "</xs:simpleType>\n        </xs:element>\n        <xs:element minOccurs=\"0"
+      + "\" maxOccurs=\"1\" name=\"SerialNumber\" nillable=\"true\">\n          <xs:simp"
+      + "leType>\n            <xs:restriction base=\"xs:string\">\n              <xs"
+      + ":maxLength value=\"100\" />\n            </xs:restriction>\n          </xs:"
+      + "simpleType>\n        </xs:element>\n        <xs:element minOccurs=\"0\" max"
+      + "Occurs=\"1\" name=\"QuantityChange\" nillable=\"true\" type=\"xs:int\" />\n     "
+      + "   <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Location\" nillable=\"tr"
+      + "ue\">\n          <xs:simpleType>\n            <xs:restriction base=\"xs:str"
+      + "ing\">\n              <xs:maxLength value=\"255\" />\n            </xs:restr"
+      + "iction>\n          </xs:simpleType>\n        </xs:element>\n        <xs:el"
+      + "ement minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateDate\" nillable=\"true\" typ"
+      + "e=\"xs:dateTime\" />\n      </xs:sequence>\n    </xs:complexType>\n  </xs:el"
+      + "ement>\n  <xs:element name=\"UpdateInventoryResponse\">\n    <xs:annotation"
+      + ">\n      <xs:documentation>\n        <doc:action xmlns:doc=\"http://schema"
+      + "s.microsoft.com/servicemodel/adapters/metadata/documentation\">Procedure"
+      + "/dbo/UpdateInventory/response</doc:action>\n      </xs:documentation>\n  "
+      + "  </xs:annotation>\n    <xs:complexType>\n      <xs:sequence>\n        <xs"
+      + ":element minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateInventoryResult\" nilla"
+      + "ble=\"true\" type=\"ns3:ArrayOfDataSet\" />\n        <xs:element minOccurs=\""
+      + "1\" maxOccurs=\"1\" name=\"ReturnValue\" type=\"xs:int\" />\n      </xs:sequenc"
+      + "e>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method UpdateInventory::get_XmlContent
+
+    .method public hidebysig specialname virtual 
+            instance string[]  get_RootNodes() cil managed
+    {
+      // Code size       22 (0x16)
+      .maxstack  3
+      .locals init (string[] V_0,
+               string[] V_1)
+      IL_0000:  nop
+      IL_0001:  ldc.i4.1
+      IL_0002:  newarr     [mscorlib]System.String
+      IL_0007:  stloc.0
+      IL_0008:  ldloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  ldstr      "UpdateInventory"
+      IL_000f:  stelem.ref
+      IL_0010:  ldloc.0
+      IL_0011:  stloc.1
+      IL_0012:  br.s       IL_0014
+
+      IL_0014:  ldloc.1
+      IL_0015:  ret
+    } // end of method UpdateInventory::get_RootNodes
+
+    .method family hidebysig specialname virtual 
+            instance object  get_RawSchema() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (object V_0)
+      IL_0000:  nop
+      IL_0001:  ldsfld     object ProductServices.Schemas.Procedure_dbo/UpdateInventory::_rawSchema
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method UpdateInventory::get_RawSchema
+
+    .method family hidebysig specialname virtual 
+            instance void  set_RawSchema(object 'value') cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  nop
+      IL_0001:  ldarg.1
+      IL_0002:  stsfld     object ProductServices.Schemas.Procedure_dbo/UpdateInventory::_rawSchema
+      IL_0007:  ret
+    } // end of method UpdateInventory::set_RawSchema
+
+    .property instance string XmlContent()
+    {
+      .get instance string ProductServices.Schemas.Procedure_dbo/UpdateInventory::get_XmlContent()
+    } // end of property UpdateInventory::XmlContent
+    .property instance string[] RootNodes()
+    {
+      .get instance string[] ProductServices.Schemas.Procedure_dbo/UpdateInventory::get_RootNodes()
+    } // end of property UpdateInventory::RootNodes
+    .property instance object RawSchema()
+    {
+      .get instance object ProductServices.Schemas.Procedure_dbo/UpdateInventory::get_RawSchema()
+      .set instance void ProductServices.Schemas.Procedure_dbo/UpdateInventory::set_RawSchema(object)
+    } // end of property UpdateInventory::RawSchema
+  } // end of class UpdateInventory
+
+  .class auto ansi serializable sealed nested public beforefieldinit UpdateInventoryResponse
+         extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase
+  {
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaAttribute::.ctor(string,
+                                                                                                        string) = ( 01 00 37 68 74 74 70 3A 2F 2F 73 63 68 65 6D 61   // ..7http://schema
+                                                                                                                    73 2E 6D 69 63 72 6F 73 6F 66 74 2E 63 6F 6D 2F   // s.microsoft.com/
+                                                                                                                    53 71 6C 2F 32 30 30 38 2F 30 35 2F 50 72 6F 63   // Sql/2008/05/Proc
+                                                                                                                    65 64 75 72 65 73 2F 64 62 6F 17 55 70 64 61 74   // edures/dbo.Updat
+                                                                                                                    65 49 6E 76 65 6E 74 6F 72 79 52 65 73 70 6F 6E   // eInventoryRespon
+                                                                                                                    73 65 00 00 )                                     // se..
+    .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaRootsAttribute::.ctor(string[]) = ( 01 00 01 00 00 00 17 55 70 64 61 74 65 49 6E 76   // .......UpdateInv
+                                                                                                                           65 6E 74 6F 72 79 52 65 73 70 6F 6E 73 65 00 00 ) // entoryResponse..
+    .field private static notserialized object _rawSchema
+    .method public hidebysig specialname rtspecialname 
+            instance void  .ctor() cil managed
+    {
+      // Code size       9 (0x9)
+      .maxstack  8
+      IL_0000:  ldarg.0
+      IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase::.ctor()
+      IL_0006:  nop
+      IL_0007:  nop
+      IL_0008:  ret
+    } // end of method UpdateInventoryResponse::.ctor
+
+    .method public hidebysig specialname virtual 
+            instance string  get_XmlContent() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (string V_0)
+      IL_0000:  nop
+      IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<xs:schema"
+      + " xmlns:ns3=\"http://schemas.datacontract.org/2004/07/System.Data\" xmlns:"
+      + "b=\"http://schemas.microsoft.com/BizTalk/2003\" elementFormDefault=\"quali"
+      + "fied\" targetNamespace=\"http://schemas.microsoft.com/Sql/2008/05/Procedu"
+      + "res/dbo\" version=\"1.0\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <"
+      + "xs:import schemaLocation=\"ProductServices.Schemas.DataSetSchema\" namesp"
+      + "ace=\"http://schemas.datacontract.org/2004/07/System.Data\" />\n  <xs:anno"
+      + "tation>\n    <xs:appinfo>\n      <fileNameHint xmlns=\"http://schemas.micr"
+      + "osoft.com/servicemodel/adapters/metadata/xsd\">Procedure.dbo</fileNameHi"
+      + "nt>\n      <references xmlns=\"http://schemas.microsoft.com/BizTalk/2003\""
+      + ">\n        <reference targetNamespace=\"http://schemas.datacontract.org/2"
+      + "004/07/System.Data\" />\n      </references>\n    </xs:appinfo>\n  </xs:ann"
+      + "otation>\n  <xs:element name=\"UpdateInventory\">\n    <xs:annotation>\n    "
+      + "  <xs:documentation>\n        <doc:action xmlns:doc=\"http://schemas.micr"
+      + "osoft.com/servicemodel/adapters/metadata/documentation\">Procedure/dbo/U"
+      + "pdateInventory</doc:action>\n      </xs:documentation>\n    </xs:annotati"
+      + "on>\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element minOcc"
+      + "urs=\"0\" maxOccurs=\"1\" name=\"ProductName\" nillable=\"true\">\n          <xs"
+      + ":simpleType>\n            <xs:restriction base=\"xs:string\">\n            "
+      + "  <xs:maxLength value=\"255\" />\n            </xs:restriction>\n          "
+      + "</xs:simpleType>\n        </xs:element>\n        <xs:element minOccurs=\"0"
+      + "\" maxOccurs=\"1\" name=\"SerialNumber\" nillable=\"true\">\n          <xs:simp"
+      + "leType>\n            <xs:restriction base=\"xs:string\">\n              <xs"
+      + ":maxLength value=\"100\" />\n            </xs:restriction>\n          </xs:"
+      + "simpleType>\n        </xs:element>\n        <xs:element minOccurs=\"0\" max"
+      + "Occurs=\"1\" name=\"QuantityChange\" nillable=\"true\" type=\"xs:int\" />\n     "
+      + "   <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Location\" nillable=\"tr"
+      + "ue\">\n          <xs:simpleType>\n            <xs:restriction base=\"xs:str"
+      + "ing\">\n              <xs:maxLength value=\"255\" />\n            </xs:restr"
+      + "iction>\n          </xs:simpleType>\n        </xs:element>\n        <xs:el"
+      + "ement minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateDate\" nillable=\"true\" typ"
+      + "e=\"xs:dateTime\" />\n      </xs:sequence>\n    </xs:complexType>\n  </xs:el"
+      + "ement>\n  <xs:element name=\"UpdateInventoryResponse\">\n    <xs:annotation"
+      + ">\n      <xs:documentation>\n        <doc:action xmlns:doc=\"http://schema"
+      + "s.microsoft.com/servicemodel/adapters/metadata/documentation\">Procedure"
+      + "/dbo/UpdateInventory/response</doc:action>\n      </xs:documentation>\n  "
+      + "  </xs:annotation>\n    <xs:complexType>\n      <xs:sequence>\n        <xs"
+      + ":element minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateInventoryResult\" nilla"
+      + "ble=\"true\" type=\"ns3:ArrayOfDataSet\" />\n        <xs:element minOccurs=\""
+      + "1\" maxOccurs=\"1\" name=\"ReturnValue\" type=\"xs:int\" />\n      </xs:sequenc"
+      + "e>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method UpdateInventoryResponse::get_XmlContent
+
+    .method public hidebysig specialname virtual 
+            instance string[]  get_RootNodes() cil managed
+    {
+      // Code size       22 (0x16)
+      .maxstack  3
+      .locals init (string[] V_0,
+               string[] V_1)
+      IL_0000:  nop
+      IL_0001:  ldc.i4.1
+      IL_0002:  newarr     [mscorlib]System.String
+      IL_0007:  stloc.0
+      IL_0008:  ldloc.0
+      IL_0009:  ldc.i4.0
+      IL_000a:  ldstr      "UpdateInventoryResponse"
+      IL_000f:  stelem.ref
+      IL_0010:  ldloc.0
+      IL_0011:  stloc.1
+      IL_0012:  br.s       IL_0014
+
+      IL_0014:  ldloc.1
+      IL_0015:  ret
+    } // end of method UpdateInventoryResponse::get_RootNodes
+
+    .method family hidebysig specialname virtual 
+            instance object  get_RawSchema() cil managed
+    {
+      // Code size       11 (0xb)
+      .maxstack  1
+      .locals init (object V_0)
+      IL_0000:  nop
+      IL_0001:  ldsfld     object ProductServices.Schemas.Procedure_dbo/UpdateInventoryResponse::_rawSchema
+      IL_0006:  stloc.0
+      IL_0007:  br.s       IL_0009
+
+      IL_0009:  ldloc.0
+      IL_000a:  ret
+    } // end of method UpdateInventoryResponse::get_RawSchema
+
+    .method family hidebysig specialname virtual 
+            instance void  set_RawSchema(object 'value') cil managed
+    {
+      // Code size       8 (0x8)
+      .maxstack  8
+      IL_0000:  nop
+      IL_0001:  ldarg.1
+      IL_0002:  stsfld     object ProductServices.Schemas.Procedure_dbo/UpdateInventoryResponse::_rawSchema
+      IL_0007:  ret
+    } // end of method UpdateInventoryResponse::set_RawSchema
+
+    .property instance string XmlContent()
+    {
+      .get instance string ProductServices.Schemas.Procedure_dbo/UpdateInventoryResponse::get_XmlContent()
+    } // end of property UpdateInventoryResponse::XmlContent
+    .property instance string[] RootNodes()
+    {
+      .get instance string[] ProductServices.Schemas.Procedure_dbo/UpdateInventoryResponse::get_RootNodes()
+    } // end of property UpdateInventoryResponse::RootNodes
+    .property instance object RawSchema()
+    {
+      .get instance object ProductServices.Schemas.Procedure_dbo/UpdateInventoryResponse::get_RawSchema()
+      .set instance void ProductServices.Schemas.Procedure_dbo/UpdateInventoryResponse::set_RawSchema(object)
+    } // end of property UpdateInventoryResponse::RawSchema
+  } // end of class UpdateInventoryResponse
+
+  .field private static notserialized object _rawSchema
+  .field private static literal notserialized string _strSchema = "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<xs:schema"
+  + " xmlns:ns3=\"http://schemas.datacontract.org/2004/07/System.Data\" xmlns:b=\"http://schemas.microsoft.com/BizTalk/200"
+  + "3\" elementFormDefault=\"qualified\" targetNamespace=\"http://schemas.microsoft.com/Sql/2008/05/Procedures/dbo\" versio"
+  + "n=\"1.0\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:import schemaLocation=\"ProductServices.Schemas.DataSetS"
+  + "chema\" namespace=\"http://schemas.datacontract.org/2004/07/System.Data\" />\n  <xs:annotation>\n    <xs:appinfo>\n     "
+  + " <fileNameHint xmlns=\"http://schemas.microsoft.com/servicemodel/adapters/metadata/xsd\">Procedure.dbo</fileNameHint"
+  + ">\n      <references xmlns=\"http://schemas.microsoft.com/BizTalk/2003\">\n        <reference targetNamespace=\"http://"
+  + "schemas.datacontract.org/2004/07/System.Data\" />\n      </references>\n    </xs:appinfo>\n  </xs:annotation>\n  <xs:el"
+  + "ement name=\"UpdateInventory\">\n    <xs:annotation>\n      <xs:documentation>\n        <doc:action xmlns:doc=\"http://s"
+  + "chemas.microsoft.com/servicemodel/adapters/metadata/documentation\">Procedure/dbo/UpdateInventory</doc:action>\n    "
+  + "  </xs:documentation>\n    </xs:annotation>\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element minOccurs="
+  + "\"0\" maxOccurs=\"1\" name=\"ProductName\" nillable=\"true\">\n          <xs:simpleType>\n            <xs:restriction base=\""
+  + "xs:string\">\n              <xs:maxLength value=\"255\" />\n            </xs:restriction>\n          </xs:simpleType>\n  "
+  + "      </xs:element>\n        <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SerialNumber\" nillable=\"true\">\n         "
+  + " <xs:simpleType>\n            <xs:restriction base=\"xs:string\">\n              <xs:maxLength value=\"100\" />\n        "
+  + "    </xs:restriction>\n          </xs:simpleType>\n        </xs:element>\n        <xs:element minOccurs=\"0\" maxOccurs"
+  + "=\"1\" name=\"QuantityChange\" nillable=\"true\" type=\"xs:int\" />\n        <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\""
+  + "Location\" nillable=\"true\">\n          <xs:simpleType>\n            <xs:restriction base=\"xs:string\">\n              <"
+  + "xs:maxLength value=\"255\" />\n            </xs:restriction>\n          </xs:simpleType>\n        </xs:element>\n       "
+  + " <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateDate\" nillable=\"true\" type=\"xs:dateTime\" />\n      </xs:sequen"
+  + "ce>\n    </xs:complexType>\n  </xs:element>\n  <xs:element name=\"UpdateInventoryResponse\">\n    <xs:annotation>\n      "
+  + "<xs:documentation>\n        <doc:action xmlns:doc=\"http://schemas.microsoft.com/servicemodel/adapters/metadata/docu"
+  + "mentation\">Procedure/dbo/UpdateInventory/response</doc:action>\n      </xs:documentation>\n    </xs:annotation>\n    "
+  + "<xs:complexType>\n      <xs:sequence>\n        <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateInventoryResult\" "
+  + "nillable=\"true\" type=\"ns3:ArrayOfDataSet\" />\n        <xs:element minOccurs=\"1\" maxOccurs=\"1\" name=\"ReturnValue\" ty"
+  + "pe=\"xs:int\" />\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase::.ctor()
+    IL_0006:  nop
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method Procedure_dbo::.ctor
+
+  .method public hidebysig specialname virtual 
+          instance string  get_XmlContent() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (string V_0)
+    IL_0000:  nop
+    IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<xs:schema"
+    + " xmlns:ns3=\"http://schemas.datacontract.org/2004/07/System.Data\" xmlns:"
+    + "b=\"http://schemas.microsoft.com/BizTalk/2003\" elementFormDefault=\"quali"
+    + "fied\" targetNamespace=\"http://schemas.microsoft.com/Sql/2008/05/Procedu"
+    + "res/dbo\" version=\"1.0\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <"
+    + "xs:import schemaLocation=\"ProductServices.Schemas.DataSetSchema\" namesp"
+    + "ace=\"http://schemas.datacontract.org/2004/07/System.Data\" />\n  <xs:anno"
+    + "tation>\n    <xs:appinfo>\n      <fileNameHint xmlns=\"http://schemas.micr"
+    + "osoft.com/servicemodel/adapters/metadata/xsd\">Procedure.dbo</fileNameHi"
+    + "nt>\n      <references xmlns=\"http://schemas.microsoft.com/BizTalk/2003\""
+    + ">\n        <reference targetNamespace=\"http://schemas.datacontract.org/2"
+    + "004/07/System.Data\" />\n      </references>\n    </xs:appinfo>\n  </xs:ann"
+    + "otation>\n  <xs:element name=\"UpdateInventory\">\n    <xs:annotation>\n    "
+    + "  <xs:documentation>\n        <doc:action xmlns:doc=\"http://schemas.micr"
+    + "osoft.com/servicemodel/adapters/metadata/documentation\">Procedure/dbo/U"
+    + "pdateInventory</doc:action>\n      </xs:documentation>\n    </xs:annotati"
+    + "on>\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element minOcc"
+    + "urs=\"0\" maxOccurs=\"1\" name=\"ProductName\" nillable=\"true\">\n          <xs"
+    + ":simpleType>\n            <xs:restriction base=\"xs:string\">\n            "
+    + "  <xs:maxLength value=\"255\" />\n            </xs:restriction>\n          "
+    + "</xs:simpleType>\n        </xs:element>\n        <xs:element minOccurs=\"0"
+    + "\" maxOccurs=\"1\" name=\"SerialNumber\" nillable=\"true\">\n          <xs:simp"
+    + "leType>\n            <xs:restriction base=\"xs:string\">\n              <xs"
+    + ":maxLength value=\"100\" />\n            </xs:restriction>\n          </xs:"
+    + "simpleType>\n        </xs:element>\n        <xs:element minOccurs=\"0\" max"
+    + "Occurs=\"1\" name=\"QuantityChange\" nillable=\"true\" type=\"xs:int\" />\n     "
+    + "   <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"Location\" nillable=\"tr"
+    + "ue\">\n          <xs:simpleType>\n            <xs:restriction base=\"xs:str"
+    + "ing\">\n              <xs:maxLength value=\"255\" />\n            </xs:restr"
+    + "iction>\n          </xs:simpleType>\n        </xs:element>\n        <xs:el"
+    + "ement minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateDate\" nillable=\"true\" typ"
+    + "e=\"xs:dateTime\" />\n      </xs:sequence>\n    </xs:complexType>\n  </xs:el"
+    + "ement>\n  <xs:element name=\"UpdateInventoryResponse\">\n    <xs:annotation"
+    + ">\n      <xs:documentation>\n        <doc:action xmlns:doc=\"http://schema"
+    + "s.microsoft.com/servicemodel/adapters/metadata/documentation\">Procedure"
+    + "/dbo/UpdateInventory/response</doc:action>\n      </xs:documentation>\n  "
+    + "  </xs:annotation>\n    <xs:complexType>\n      <xs:sequence>\n        <xs"
+    + ":element minOccurs=\"0\" maxOccurs=\"1\" name=\"UpdateInventoryResult\" nilla"
+    + "ble=\"true\" type=\"ns3:ArrayOfDataSet\" />\n        <xs:element minOccurs=\""
+    + "1\" maxOccurs=\"1\" name=\"ReturnValue\" type=\"xs:int\" />\n      </xs:sequenc"
+    + "e>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method Procedure_dbo::get_XmlContent
+
+  .method public hidebysig specialname virtual 
+          instance string[]  get_RootNodes() cil managed
+  {
+    // Code size       30 (0x1e)
+    .maxstack  3
+    .locals init (string[] V_0,
+             string[] V_1)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.2
+    IL_0002:  newarr     [mscorlib]System.String
+    IL_0007:  stloc.0
+    IL_0008:  ldloc.0
+    IL_0009:  ldc.i4.0
+    IL_000a:  ldstr      "UpdateInventory"
+    IL_000f:  stelem.ref
+    IL_0010:  ldloc.0
+    IL_0011:  ldc.i4.1
+    IL_0012:  ldstr      "UpdateInventoryResponse"
+    IL_0017:  stelem.ref
+    IL_0018:  ldloc.0
+    IL_0019:  stloc.1
+    IL_001a:  br.s       IL_001c
+
+    IL_001c:  ldloc.1
+    IL_001d:  ret
+  } // end of method Procedure_dbo::get_RootNodes
+
+  .method family hidebysig specialname virtual 
+          instance object  get_RawSchema() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (object V_0)
+    IL_0000:  nop
+    IL_0001:  ldsfld     object ProductServices.Schemas.Procedure_dbo::_rawSchema
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method Procedure_dbo::get_RawSchema
+
+  .method family hidebysig specialname virtual 
+          instance void  set_RawSchema(object 'value') cil managed
+  {
+    // Code size       8 (0x8)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.1
+    IL_0002:  stsfld     object ProductServices.Schemas.Procedure_dbo::_rawSchema
+    IL_0007:  ret
+  } // end of method Procedure_dbo::set_RawSchema
+
+  .property instance string XmlContent()
+  {
+    .get instance string ProductServices.Schemas.Procedure_dbo::get_XmlContent()
+  } // end of property Procedure_dbo::XmlContent
+  .property instance string[] RootNodes()
+  {
+    .get instance string[] ProductServices.Schemas.Procedure_dbo::get_RootNodes()
+  } // end of property Procedure_dbo::RootNodes
+  .property instance object RawSchema()
+  {
+    .get instance object ProductServices.Schemas.Procedure_dbo::get_RawSchema()
+    .set instance void ProductServices.Schemas.Procedure_dbo::set_RawSchema(object)
+  } // end of property Procedure_dbo::RawSchema
+} // end of class ProductServices.Schemas.Procedure_dbo
+
+.class public auto ansi serializable sealed beforefieldinit Schemas.InventoryUpdate
+       extends [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase
+{
+  .custom instance void [System]System.CodeDom.Compiler.GeneratedCodeAttribute::.ctor(string,
+                                                                                      string) = ( 01 00 21 4D 69 63 72 6F 73 6F 66 74 2E 42 69 7A   // ..!Microsoft.Biz
+                                                                                                  54 61 6C 6B 2E 53 63 68 65 6D 61 2E 43 6F 6D 70   // Talk.Schema.Comp
+                                                                                                  69 6C 65 72 07 33 2E 30 2E 31 2E 30 00 00 )       // iler.3.0.1.0..
+  .custom instance void [mscorlib]System.Diagnostics.DebuggerNonUserCodeAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilerGeneratedAttribute::.ctor() = ( 01 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaTypeAttribute::.ctor(valuetype [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaTypeEnum) = ( 01 00 02 00 00 00 00 00 ) 
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaAttribute::.ctor(string,
+                                                                                                      string) = ( 01 00 1E 68 74 74 70 3A 2F 2F 53 63 68 65 6D 61   // ...http://Schema
+                                                                                                                  73 2E 49 6E 76 65 6E 74 6F 72 79 55 70 64 61 74   // s.InventoryUpdat
+                                                                                                                  65 0F 49 6E 76 65 6E 74 6F 72 79 55 70 64 61 74   // e.InventoryUpdat
+                                                                                                                  65 00 00 )                                        // e..
+  .custom instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaRootsAttribute::.ctor(string[]) = ( 01 00 01 00 00 00 0F 49 6E 76 65 6E 74 6F 72 79   // .......Inventory
+                                                                                                                         55 70 64 61 74 65 00 00 )                         // Update..
+  .field private static notserialized object _rawSchema
+  .field private static literal notserialized string _strSchema = "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<xs:schema"
+  + " xmlns=\"http://Schemas.InventoryUpdate\" xmlns:b=\"http://schemas.microsoft.com/BizTalk/2003\" targetNamespace=\"http:"
+  + "//Schemas.InventoryUpdate\" xmlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:element name=\"InventoryUpdate\">\n    "
+  + "<xs:complexType>\n      <xs:sequence>\n        <xs:element minOccurs=\"1\" maxOccurs=\"1\" name=\"ProductName\" type=\"xs:s"
+  + "tring\" />\n        <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SerialNumber\" type=\"xs:string\" />\n        <xs:elem"
+  + "ent minOccurs=\"1\" maxOccurs=\"1\" name=\"QuantityChange\" type=\"xs:integer\" />\n        <xs:element minOccurs=\"1\" maxOc"
+  + "curs=\"1\" name=\"Location\" type=\"xs:string\" />\n        <xs:element minOccurs=\"1\" maxOccurs=\"1\" name=\"UpdateDate\" typ"
+  + "e=\"xs:date\" />\n      </xs:sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"
+  .method public hidebysig specialname rtspecialname 
+          instance void  .ctor() cil managed
+  {
+    // Code size       9 (0x9)
+    .maxstack  8
+    IL_0000:  ldarg.0
+    IL_0001:  call       instance void [Microsoft.XLANGs.BaseTypes]Microsoft.XLANGs.BaseTypes.SchemaBase::.ctor()
+    IL_0006:  nop
+    IL_0007:  nop
+    IL_0008:  ret
+  } // end of method InventoryUpdate::.ctor
+
+  .method public hidebysig specialname virtual 
+          instance string  get_XmlContent() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (string V_0)
+    IL_0000:  nop
+    IL_0001:  ldstr      "<\?xml version=\"1.0\" encoding=\"utf-16\"\?>\n<xs:schema"
+    + " xmlns=\"http://Schemas.InventoryUpdate\" xmlns:b=\"http://schemas.microso"
+    + "ft.com/BizTalk/2003\" targetNamespace=\"http://Schemas.InventoryUpdate\" x"
+    + "mlns:xs=\"http://www.w3.org/2001/XMLSchema\">\n  <xs:element name=\"Invento"
+    + "ryUpdate\">\n    <xs:complexType>\n      <xs:sequence>\n        <xs:element"
+    + " minOccurs=\"1\" maxOccurs=\"1\" name=\"ProductName\" type=\"xs:string\" />\n   "
+    + "     <xs:element minOccurs=\"0\" maxOccurs=\"1\" name=\"SerialNumber\" type=\""
+    + "xs:string\" />\n        <xs:element minOccurs=\"1\" maxOccurs=\"1\" name=\"Qua"
+    + "ntityChange\" type=\"xs:integer\" />\n        <xs:element minOccurs=\"1\" max"
+    + "Occurs=\"1\" name=\"Location\" type=\"xs:string\" />\n        <xs:element minO"
+    + "ccurs=\"1\" maxOccurs=\"1\" name=\"UpdateDate\" type=\"xs:date\" />\n      </xs:"
+    + "sequence>\n    </xs:complexType>\n  </xs:element>\n</xs:schema>"
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method InventoryUpdate::get_XmlContent
+
+  .method public hidebysig specialname virtual 
+          instance string[]  get_RootNodes() cil managed
+  {
+    // Code size       22 (0x16)
+    .maxstack  3
+    .locals init (string[] V_0,
+             string[] V_1)
+    IL_0000:  nop
+    IL_0001:  ldc.i4.1
+    IL_0002:  newarr     [mscorlib]System.String
+    IL_0007:  stloc.0
+    IL_0008:  ldloc.0
+    IL_0009:  ldc.i4.0
+    IL_000a:  ldstr      "InventoryUpdate"
+    IL_000f:  stelem.ref
+    IL_0010:  ldloc.0
+    IL_0011:  stloc.1
+    IL_0012:  br.s       IL_0014
+
+    IL_0014:  ldloc.1
+    IL_0015:  ret
+  } // end of method InventoryUpdate::get_RootNodes
+
+  .method family hidebysig specialname virtual 
+          instance object  get_RawSchema() cil managed
+  {
+    // Code size       11 (0xb)
+    .maxstack  1
+    .locals init (object V_0)
+    IL_0000:  nop
+    IL_0001:  ldsfld     object Schemas.InventoryUpdate::_rawSchema
+    IL_0006:  stloc.0
+    IL_0007:  br.s       IL_0009
+
+    IL_0009:  ldloc.0
+    IL_000a:  ret
+  } // end of method InventoryUpdate::get_RawSchema
+
+  .method family hidebysig specialname virtual 
+          instance void  set_RawSchema(object 'value') cil managed
+  {
+    // Code size       8 (0x8)
+    .maxstack  8
+    IL_0000:  nop
+    IL_0001:  ldarg.1
+    IL_0002:  stsfld     object Schemas.InventoryUpdate::_rawSchema
+    IL_0007:  ret
+  } // end of method InventoryUpdate::set_RawSchema
+
+  .property instance string XmlContent()
+  {
+    .get instance string Schemas.InventoryUpdate::get_XmlContent()
+  } // end of property InventoryUpdate::XmlContent
+  .property instance string[] RootNodes()
+  {
+    .get instance string[] Schemas.InventoryUpdate::get_RootNodes()
+  } // end of property InventoryUpdate::RootNodes
+  .property instance object RawSchema()
+  {
+    .get instance object Schemas.InventoryUpdate::get_RawSchema()
+    .set instance void Schemas.InventoryUpdate::set_RawSchema(object)
+  } // end of property InventoryUpdate::RawSchema
+} // end of class Schemas.InventoryUpdate
+
+
+// =============================================================
+
+// *********** DISASSEMBLY COMPLETE ***********************
+// WARNING: Created Win32 resource file c:\Projects\IntegrationIdea01\bin\Schemas.res
